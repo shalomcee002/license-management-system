@@ -6,6 +6,7 @@ com\license\management\system\repositories\UserRepository.class
 com\license\management\system\services\LicenseService.class
 com\license\management\system\models\Notification.class
 com\license\management\system\models\Role$RoleName.class
+com\license\management\system\controllers\UserPasswordController.class
 com\license\management\system\Application.class
 com\license\management\system\repositories\RoleRepository.class
 com\license\management\system\services\RegulatorService.class
@@ -15,6 +16,7 @@ com\license\management\system\services\ReportService.class
 com\license\management\system\services\CompanyService.class
 com\license\management\system\models\User.class
 com\license\management\system\security\JwtUtil.class
+com\license\management\system\services\UserServiceImpl.class
 com\license\management\system\controllers\NotificationController.class
 com\license\management\system\config\SecurityConfig.class
 com\license\management\system\controllers\CompanyController.class
@@ -22,6 +24,7 @@ com\license\management\system\config\DataInitializer.class
 com\license\management\system\controllers\LicenseController.class
 com\license\management\system\models\CellularTelecomLicense.class
 com\license\management\system\models\Role.class
+com\license\management\system\services\UserService.class
 com\license\management\system\security\JwtAuthenticationFilter.class
 com\license\management\system\controllers\FeeController.class
 com\license\management\system\models\License.class
@@ -33,3 +36,4 @@ com\license\management\system\repositories\PublicRadioStationLicenseRepository.c
 com\license\management\system\config\WebConfig$1.class
 com\license\management\system\config\MailConfig.class
 com\license\management\system\config\WebConfig.class
+com\license\management\system\controllers\UserController.class

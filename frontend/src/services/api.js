@@ -35,6 +35,9 @@ export const deleteCompany = (id) => api.delete(`/companies/${id}`).then(r => r.
 export const fetchLicenses = () => api.get('/licenses').then(r => r.data);
 export const fetchLicensesCount = () => api.get('/licenses/count').then(r => r.data);
 export const fetchLicensesTypeCount = () => api.get('/licenses/types/count').then(r => r.data);
+
+// User
+export const changePassword = (currentPassword, newPassword) => api.post('/users/change-password', { currentPassword, newPassword }).then(r => r.data);
 export const fetchExpiringSoonCount = (days=90) => api.get(`/licenses/expiring-soon/count?days=${days}`).then(r => r.data);
 export const createLicense = (payload) => api.post('/licenses', payload).then(r => r.data);
 export const updateLicense = (id, payload) => api.put(`/licenses/${id}`, payload).then(r => r.data);
@@ -58,7 +61,15 @@ export const login = async (email, password) => {
   const role = (data.roles && data.roles[0]) || 'VIEWER';
   localStorage.setItem('auth_token', data.token);
   localStorage.setItem('auth_role', role);
-  return { token: data.token, role };
+  return { token: data.token, role, roles: data.roles };
+};
+
+export const signup = async (name, email, password, role = 'VIEWER') => {
+  const { data } = await api.post('/auth/signup', { name, email, password, role });
+  const userRole = (data.roles && data.roles[0]) || role;
+  localStorage.setItem('auth_token', data.token);
+  localStorage.setItem('auth_role', userRole);
+  return { token: data.token, role: userRole };
 };
 
 export const logout = () => {

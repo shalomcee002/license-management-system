@@ -1,0 +1,118 @@
+/* ExpiryCalculator.css */
+.expiry-calculator {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.expiry-calculator h2 {
+  margin-top: 0;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.expiry-calculator .form-group {
+  margin-bottom: 15px;
+}
+
+.expiry-calculator label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.expiry-calculator select,
+.expiry-calculator input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.expiry-calculator button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.expiry-calculator button:hover {
+  background-color: #2980b9;
+}
+
+.expiry-calculator button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.role-indicator {
+  padding: 8px 15px;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.role-indicator.admin {
+  background-color: #4caf50;
+}
+
+.role-indicator.officer {
+  background-color: #2196f3;
+}
+
+.role-indicator.viewer {
+  background-color: #ff9800;
+}
+
+.result-container {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
+
+.result-container h3 {
+  margin-top: 0;
+  color: #2c3e50;
+  font-size: 16px;
+}
+
+.result-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.result-container th,
+.result-container td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.result-container th {
+  font-weight: 600;
+}
+
+.expiry-warning {
+  color: #e74c3c;
+  font-weight: 500;
+}
+
+.expiry-safe {
+  color: #2ecc71;
+  font-weight: 500;
+}
+
+.expiry-caution {
+  color: #f39c12;
+  font-weight: 500;
+}

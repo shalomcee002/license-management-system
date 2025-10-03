@@ -1,0 +1,71 @@
+/* LicenseComparator.css */
+.license-comparator {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.license-comparator h2 {
+  margin-top: 0;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.license-comparator .form-group {
+  margin-bottom: 15px;
+}
+
+.license-comparator select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.license-comparator button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.license-comparator button:hover {
+  background-color: #2980b9;
+}
+
+.comparison-results {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.comparison-results table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comparison-results th,
+.comparison-results td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.comparison-results th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.comparison-results .highlight {
+  background-color: #fffde7;
+}
+
+.comparison-results .different {
+  color: #e74c3c;
+  font-weight: 500;
+}

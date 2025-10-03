@@ -9,8 +9,12 @@ import LicenseComparator from './components/Compare/LicenseComparator';
 import ExportReports from './components/Reports/ExportReports';
 import MapView from './components/Map/MapView';
 import ExpiryNotifier from './components/Notifications/ExpiryNotifier';
+import UserManagement from './components/Users/UserManagement';
+import RoleLicenseManagement from './components/RoleLicenseManagement';
 import ProtectedRoute from './components/ProtectedRoute';
 import Login from './pages/Login';
+import Signup from './pages/Signup';
+import PasswordChange from './components/User/PasswordChange';
 
 const App = () => {
   return (
@@ -28,12 +32,16 @@ const App = () => {
             <Link style={{ color: '#fff' }} to="/reports">Reports</Link>
             <Link style={{ color: '#fff' }} to="/map">Map</Link>
             <Link style={{ color: '#fff' }} to="/notifications">Notifications</Link>
-            <Link style={{ color: '#fff' }} to="/login">Login</Link>
+            <Link style={{ color: '#fff' }} to="/users">User Management</Link>
+          <Link style={{ color: '#fff' }} to="/change-password">Change Password</Link>
+          <Link style={{ color: '#fff' }} to="/login">Login</Link>
+          <Link style={{ color: '#fff' }} to="/signup">Sign Up</Link>
           </nav>
         </aside>
         <main style={{ flex: 1, padding: 24, background: '#f8fafc' }}>
           <Routes>
             <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
             <Route path="/" element={<ProtectedRoute><HomeDashboard /></ProtectedRoute>} />
             <Route path="/companies" element={<ProtectedRoute roles={["ADMIN","OFFICER"]}><CompanyList /></ProtectedRoute>} />
             <Route path="/licenses" element={<ProtectedRoute roles={["ADMIN","OFFICER"]}><LicenseList /></ProtectedRoute>} />
@@ -43,6 +51,8 @@ const App = () => {
             <Route path="/reports" element={<ProtectedRoute roles={["ADMIN","OFFICER"]}><ExportReports /></ProtectedRoute>} />
             <Route path="/map" element={<ProtectedRoute roles={["ADMIN","OFFICER","VIEWER"]}><MapView /></ProtectedRoute>} />
             <Route path="/notifications" element={<ProtectedRoute roles={["ADMIN"]}><ExpiryNotifier /></ProtectedRoute>} />
+            <Route path="/users" element={<ProtectedRoute roles={["ADMIN"]}><UserManagement /></ProtectedRoute>} />
+            <Route path="/change-password" element={<ProtectedRoute><PasswordChange /></ProtectedRoute>} />
           </Routes>
         </main>
       </div>
