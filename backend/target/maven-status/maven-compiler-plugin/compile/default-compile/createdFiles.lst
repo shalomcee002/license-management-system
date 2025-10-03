@@ -31,4 +31,5 @@ com\license\management\system\repositories\CellularTelecomLicenseRepository.clas
 com\license\management\system\repositories\LicenseRepository.class
 com\license\management\system\repositories\PublicRadioStationLicenseRepository.class
 com\license\management\system\config\WebConfig$1.class
+com\license\management\system\config\MailConfig.class
 com\license\management\system\config\WebConfig.class

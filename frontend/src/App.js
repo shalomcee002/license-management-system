@@ -34,7 +34,7 @@ const App = () => {
         <main style={{ flex: 1, padding: 24, background: '#f8fafc' }}>
           <Routes>
             <Route path="/login" element={<Login />} />
-            <Route path="/" element={<HomeDashboard />} />
+            <Route path="/" element={<ProtectedRoute><HomeDashboard /></ProtectedRoute>} />
             <Route path="/companies" element={<ProtectedRoute roles={["ADMIN","OFFICER"]}><CompanyList /></ProtectedRoute>} />
             <Route path="/licenses" element={<ProtectedRoute roles={["ADMIN","OFFICER"]}><LicenseList /></ProtectedRoute>} />
             <Route path="/settings/fees" element={<ProtectedRoute roles={["ADMIN"]}><FeeAdjuster /></ProtectedRoute>} />

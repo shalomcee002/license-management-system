@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
 
 const hasAccess = (requiredRoles) => {
   const token = localStorage.getItem('auth_token');
@@ -13,4 +13,4 @@ const ProtectedRoute = ({ children, roles }) => {
   return hasAccess(roles) ? children : <Navigate to="/login" replace />;
 };
 
-export default ProtectedRoute; 
+export default ProtectedRoute;
